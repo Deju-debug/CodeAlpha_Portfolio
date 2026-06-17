@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of an aspiring software engineer specializing in HTML, CSS, JavaScript, and responsive web development.">
+  <meta name="keywords" content="software engineer, web developer, portfolio, HTML, CSS, JavaScript">
+  <meta name="author" content="Alex Rivera">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Alex Rivera | Aspiring Software Engineer">
+  <meta property="og:description" content="Modern portfolio showcasing web development projects and skills.">
+  <meta property="og:type" content="website">
+  <title>Dejen Belete | Aspiring Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#hero" class="nav__logo" aria-label="Go to homepage">
+        <span class="nav__logo-bracket">&lt;</span>DB<span class="nav__logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+          <span class="nav__toggle-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__container">
+        <div class="hero__content">
+          <p class="hero__greeting animate-on-scroll">Hello, I'm</p>
+          <h1 class="hero__name animate-on-scroll">Dejen Belete</h1>
+          <h2 class="hero__title animate-on-scroll">
+            <span class="hero__title-static">Aspiring </span>
+            <span class="hero__typing" id="typing-text" aria-live="polite"></span>
+            <span class="hero__cursor" aria-hidden="true">|</span>
+          </h2>
+          <p class="hero__intro animate-on-scroll">
+            I build clean, responsive web experiences with modern HTML, CSS, and JavaScript.
+            Passionate about turning ideas into intuitive digital products.
+          </p>
+          <div class="hero__actions animate-on-scroll">
+            <a href="#projects" class="btn btn--primary">View My Work</a>
+            <a href="resume.pdf" class="btn btn--secondary" download>Download Resume</a>
+            <a href="#contact" class="btn btn--outline">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero__visual animate-on-scroll" aria-hidden="true">
+          <div class="hero__code-block">
+            <div class="hero__code-header">
+              <span class="hero__code-dot hero__code-dot--red"></span>
+              <span class="hero__code-dot hero__code-dot--yellow"></span>
+              <span class="hero__code-dot hero__code-dot--green"></span>
+            </div>
+            <pre class="hero__code"><code><span class="code-keyword">const</span> developer = {
+  <span class="code-property">name</span>: <span class="code-string">"Dejen Belete"</span>,
+  <span class="code-property">role</span>: <span class="code-string">"Web Developer"</span>,
+  <span class="code-property">skills</span>: [<span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>, <span class="code-string">"JS"</span>],
+  <span class="code-property">passion</span>: <span class="code-string">"Building great UX"</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll to about section">
+        <span class="hero__scroll-text">Scroll</span>
+        <span class="hero__scroll-icon"></span>
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="container">
+        <header class="section__header animate-on-scroll">
+          <span class="section__label">About Me</span>
+          <h2 class="section__title">Who I Am</h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__content animate-on-scroll">
+            <p class="about__text">
+              I'm an aspiring software engineer with a strong foundation in front-end development.
+              I enjoy solving problems through code and creating interfaces that are both beautiful
+              and accessible. Every project is an opportunity to learn, grow, and refine my craft.
+            </p>
+            <p class="about__text">
+              When I'm not coding, you'll find me exploring new web technologies, contributing to
+              open-source projects, and staying curious about how great software gets built.
+            </p>
+
+            <div class="about__goals">
+              <h3 class="about__subtitle">Career Goals</h3>
+              <ul class="about__list">
+                <li>Land a junior software engineering role at a product-focused company</li>
+                <li>Master modern JavaScript frameworks and full-stack development</li>
+                <li>Contribute to meaningful projects that impact real users</li>
+                <li>Continuously improve through mentorship and collaboration</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside class="about__card animate-on-scroll">
+            <h3 class="about__subtitle">Education</h3>
+            <div class="about__education">
+              <div class="about__edu-item">
+                <span class="about__edu-degree">B.S. Computer Science</span>
+                <span class="about__edu-school">Addis Ababa University</span>
+                <span class="about__edu-year">2025 – 2029 (Expected)</span>
+              </div>
+              <div class="about__edu-item">
+                <span class="about__edu-degree">Web Development Bootcamp</span>
+                <span class="about__edu-school">CodeAlpha</span>
+                <span class="about__edu-year">2026</span>
+              </div>
+            </div>
+            <div class="about__stats">
+              <div class="about__stat">
+                <span class="about__stat-number">10+</span>
+                <span class="about__stat-label">Projects Built</span>
+              </div>
+              <div class="about__stat">
+                <span class="about__stat-number">4</span>
+                <span class="about__stat-label">Core Skills</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <header class="section__header animate-on-scroll">
+          <span class="section__label">Skills</span>
+          <h2 class="section__title">What I Work With</h2>
+        </header>
+
+        <div class="skills__grid">
+          <article class="skill-card animate-on-scroll">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 18l6-6-6-6"></path>
+                <path d="M8 6l-6 6 6 6"></path>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">HTML</h3>
+            <p class="skill-card__desc">Semantic markup, accessibility, and SEO-friendly structure for modern web applications.</p>
+            <div class="skill-card__bar">
+              <div class="skill-card__progress" data-progress="90"></div>
+            </div>
+          </article>
+
+          <article class="skill-card animate-on-scroll">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">CSS</h3>
+            <p class="skill-card__desc">Flexbox, Grid, animations, custom properties, and polished visual design systems.</p>
+            <div class="skill-card__bar">
+              <div class="skill-card__progress" data-progress="85"></div>
+            </div>
+          </article>
+
+          <article class="skill-card animate-on-scroll">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <path d="M9 9h6v6H9z"></path>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">JavaScript</h3>
+            <p class="skill-card__desc">DOM manipulation, ES6+, async programming, and interactive user experiences.</p>
+            <div class="skill-card__bar">
+              <div class="skill-card__progress" data-progress="80"></div>
+            </div>
+          </article>
+
+          <article class="skill-card animate-on-scroll">
+            <div class="skill-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="skill-card__title">Responsive Design</h3>
+            <p class="skill-card__desc">Mobile-first layouts that look and perform great on every screen size.</p>
+            <div class="skill-card__bar">
+              <div class="skill-card__progress" data-progress="88"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <header class="section__header animate-on-scroll">
+          <span class="section__label">Projects</span>
+          <h2 class="section__title">Featured Work</h2>
+        </header>
+
+        <div class="projects__grid">
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__image project-card__image--calculator">
+              <div class="project-card__overlay">
+                <a href="https://deju-debug.github.io/codeAlpha_Calculator/" class="project-card__link" aria-label="View Calculator project">View Project</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Calculator</h3>
+              <p class="project-card__desc">
+                A sleek, functional calculator built with vanilla JavaScript featuring keyboard
+                support and smooth button animations.
+              </p>
+              <ul class="project-card__tags">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://deju-debug.github.io/codeAlpha_Calculator/" class="project-card__btn" aria-label="Calculator live demo">Live Demo</a>
+                <a href="https://github.com/Deju-debug/codeAlpha_Calculator.git" class="project-card__btn project-card__btn--outline" aria-label="Calculator source code">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card animate-on-scroll">
+            <div class="project-card__image project-card__image--gallery">
+              <div class="project-card__overlay">
+                <a href="https://deju-debug.github.io/codeAlpha_Image_Gallery/" class="project-card__link" aria-label="View Image Gallery project">View Project</a>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Image Gallery</h3>
+              <p class="project-card__desc">
+                An interactive photo gallery with lightbox modal, lazy loading, and responsive
+                grid layout for optimal viewing on any device.
+              </p>
+              <ul class="project-card__tags">
+                <li>HTML</li>
+                <li>CSS Grid</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://deju-debug.github.io/codeAlpha_Image_Gallery/" class="project-card__btn" aria-label="Image Gallery live demo">Live Demo</a>
+                <a href="https://github.com/Deju-debug/codeAlpha_Image_Gallery.git" class="project-card__btn project-card__btn--outline" aria-label="Image Gallery source code">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card project-card--placeholder animate-on-scroll">
+            <div class="project-card__image project-card__image--placeholder">
+              <div class="project-card__placeholder-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Coming Soon</h3>
+              <p class="project-card__desc">
+                More projects are on the way. Stay tuned for upcoming work including a task manager
+                app and a weather dashboard.
+              </p>
+              <ul class="project-card__tags">
+                <li>In Progress</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <header class="section__header animate-on-scroll">
+          <span class="section__label">Contact</span>
+          <h2 class="section__title">Let's Connect</h2>
+        </header>
+
+        <div class="contact__grid">
+          <div class="contact__info animate-on-scroll">
+            <p class="contact__text">
+              I'm open to internships, collaborations, and new opportunities.
+              Feel free to reach out — I'll get back to you as soon as I can.
+            </p>
+
+            <ul class="contact__links">
+              <li>
+                <a href="mailto:dejenbelete623@gmail.com" class="contact__link">
+                  <span class="contact__link-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </span>
+                  dejenbelete623@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/dejen-belete-9077b7312/" class="contact__link" target="_blank" rel="noopener noreferrer">
+                  <span class="contact__link-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                  </span>
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Deju-debug" class="contact__link" target="_blank" rel="noopener noreferrer">
+                  <span class="contact__link-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </span>
+                  GitHub
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact__form animate-on-scroll" id="contact-form" novalidate>
+            <div class="form__group">
+              <label for="name" class="form__label">Name</label>
+              <input type="text" id="name" name="name" class="form__input" placeholder="Your name" required autocomplete="name">
+              <span class="form__error" id="name-error"></span>
+            </div>
+            <div class="form__group">
+              <label for="email" class="form__label">Email</label>
+              <input type="email" id="email" name="email" class="form__input" placeholder="your@email.com" required autocomplete="email">
+              <span class="form__error" id="email-error"></span>
+            </div>
+            <div class="form__group">
+              <label for="message" class="form__label">Message</label>
+              <textarea id="message" name="message" class="form__input form__textarea" placeholder="Your message..." rows="5" required></textarea>
+              <span class="form__error" id="message-error"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+            <p class="form__success" id="form-success" role="status" hidden>Thank you! Your message has been sent.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <p class="footer__text">&copy; <span id="year"></span> Dejen Belete. Built with HTML, CSS &amp; JavaScript.</p>
+      <a href="#hero" class="footer__top" aria-label="Back to top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
